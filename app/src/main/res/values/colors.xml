@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#cb5ab1</color>
+    <color name="colorPrimaryDark">#AD4C97</color>
+    <color name="colorAccent">#cb5ab1</color>
+    <color name="baseBackDarker">#F1F1F1</color>
+    <color name="statusBarColor">#FFFFFF</color>
+
+    <color name="navTint">#014bc3</color>
+    <color name="navColor">#727272</color>
+    <color name="navBackground">#c3c3c3</color>
+
+    <color name="transparentBlack">#CC000000</color>
+    <color name="black">#000000</color>
+    <color name="white">#FFFFFF</color>
+    <color name="red">#FF0000</color>
+    <color name="hintColor">#35bbe0</color>
+
+    <color name="themeYellow">#E0B817</color>
+    <color name="transparent">#FFFFFF</color>
+    <color name="themeGray">#5F5F5E</color>
+</resources>

@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+        <variable
+            name="viewModel"
+            type="com.emefar.tmdb.ui.favorites.FavoritesViewModel" />
+
+        <variable
+            name="postListAdapter"
+            type="com.emefar.tmdb.ui.favorites.FavoritesListAdapter" />
+    </data>
+
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/header_text"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:background="@color/hintColor"
+            android:gravity="center"
+            android:text="@string/bottom_nav_favorites"
+            android:textColor="@color/white"
+            android:textSize="20sp"
+            android:textStyle="bold" />
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/rv"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_below="@+id/header_text"
+            android:layout_marginTop="10dp"
+            app:adapter="@{postListAdapter}"
+            tools:listitem="@layout/item_movie" />
+
+        <ProgressBar
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:visibility="gone"
+            app:mutableVisibility="@{viewModel.getLoadingVisibility()}" />
+
+    </RelativeLayout>
+
+
+</layout>

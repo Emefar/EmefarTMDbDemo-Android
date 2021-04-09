@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/navigation"
+    app:startDestination="@id/search_dest">
+
+    <fragment
+        android:id="@+id/search_dest"
+        android:name="com.emefar.tmdb.ui.search.SearchFrg"
+        android:label="fragment_search"
+        tools:layout="@layout/frag_search">
+        <action
+            android:id="@+id/action_search_dest_to_details_dest"
+            app:destination="@id/details_dest" />
+    </fragment>
+
+
+    <fragment
+        android:id="@+id/details_dest"
+        android:name="com.emefar.tmdb.ui.details.DetailsFrg"
+        android:label="fragment_details"
+        tools:layout="@layout/frag_details">
+
+    <argument
+        android:name="model"
+        app:argType="com.emefar.tmdb.model.MovieItem" />
+    </fragment>
+
+
+
+    <fragment
+        android:id="@+id/watchlist_dest"
+        android:name="com.emefar.tmdb.ui.watchlist.WatchlistFrg"
+        android:label="fragment_watchlist"
+        tools:layout="@layout/frag_watchlist" >
+        <action
+            android:id="@+id/action_watchlist_dest_to_details_dest"
+            app:destination="@id/details_dest" />
+    </fragment>
+
+
+    <fragment
+        android:id="@+id/favorites_dest"
+        android:name="com.emefar.tmdb.ui.favorites.FavoritesFrg"
+        android:label="fragment_favorites"
+        tools:layout="@layout/frag_favorites" >
+        <action
+            android:id="@+id/action_favorites_dest_to_details_dest"
+            app:destination="@id/details_dest" />
+    </fragment>
+
+
+</navigation>

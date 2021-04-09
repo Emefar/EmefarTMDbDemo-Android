@@ -1,0 +1,152 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:context="com.emefar.tmdb.ui.details.DetailsFrg">
+
+    <data>
+
+        <variable
+            name="model"
+            type="com.emefar.tmdb.model.MovieItem" />
+
+    </data>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <androidx.core.widget.NestedScrollView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="50dp">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical">
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="450dp">
+
+                    <androidx.appcompat.widget.AppCompatImageView
+                        android:id="@+id/cover_image_view"
+                        android:layout_width="match_parent"
+                        android:layout_height="450dp"
+                        android:scaleType="centerCrop"
+                        app:imageUrl="@{model.posterPath}"
+                        tools:src="@tools:sample/avatars" />
+
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="60dp"
+                        android:layout_alignParentBottom="true"
+                        android:background="@color/transparentBlack">
+
+
+                        <androidx.appcompat.widget.AppCompatImageView
+                            android:id="@+id/ic_calendar"
+                            android:layout_width="20dp"
+                            android:layout_height="20dp"
+                            android:layout_alignParentEnd="true"
+                            android:layout_alignParentBottom="true"
+                            android:layout_marginEnd="5dp"
+                            android:layout_marginBottom="5dp"
+                            app:srcCompat="@drawable/ic_calendar" />
+
+
+                        <androidx.appcompat.widget.AppCompatTextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentBottom="true"
+                            android:layout_marginEnd="5dp"
+                            android:layout_marginBottom="5dp"
+                            android:layout_toStartOf="@+id/ic_calendar"
+                            android:text="@{model.releaseDate}"
+                            android:textColor="@color/white" />
+
+
+                        <androidx.appcompat.widget.AppCompatImageView
+                            android:id="@+id/ic_star"
+                            android:layout_width="20dp"
+                            android:layout_height="20dp"
+                            android:layout_alignParentBottom="true"
+                            android:layout_marginStart="5dp"
+                            android:layout_marginBottom="5dp"
+                            app:srcCompat="@drawable/ic_star" />
+
+                        <androidx.appcompat.widget.AppCompatTextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentBottom="true"
+                            android:layout_marginStart="5dp"
+                            android:layout_marginBottom="5dp"
+                            android:layout_toEndOf="@+id/ic_star"
+                            android:text="@{model.voteAverage}"
+                            android:textColor="@color/white" />
+
+                        <androidx.appcompat.widget.AppCompatTextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="5dp"
+                            android:layout_marginEnd="5dp"
+                            android:layout_marginBottom="25dp"
+                            android:text="@{model.title}"
+                            android:textColor="@color/white"
+                            android:textSize="17sp"
+                            android:textStyle="bold" />
+
+                    </RelativeLayout>
+
+
+                </RelativeLayout>
+
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="5dp"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginEnd="5dp"
+                    android:layout_marginBottom="5dp"
+                    android:text="@{model.overview}"
+                    android:textColor="@color/black"
+                    android:textSize="16sp" />
+
+
+            </LinearLayout>
+
+        </androidx.core.widget.NestedScrollView>
+
+        <TableLayout
+            android:id="@+id/tablelayout"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:layout_alignParentBottom="true">
+
+            <TableRow>
+
+                <androidx.appcompat.widget.AppCompatButton
+                    android:layout_weight="1"
+                    android:background="@color/black"
+                    android:text="@string/add_to_favorites"
+                    android:id="@+id/add_to_favorites"
+                    android:textColor="@color/white" />
+
+                <androidx.appcompat.widget.AppCompatButton
+                    android:layout_weight="1"
+                    android:background="@color/red"
+                    android:text="@string/add_to_watchlist"
+                    android:id="@+id/add_to_watchlist"
+                    android:textColor="@color/white" />
+
+            </TableRow>
+
+        </TableLayout>
+
+    </RelativeLayout>
+
+
+</layout>

@@ -1,0 +1,32 @@
+<resources>
+    <string name="app_name">Emefar TMDb Demo</string>
+
+    <string name="something_went_wrong">Something went wrong</string>
+    <string name="copied">Copied</string>
+    <string name="yes">Yes</string>
+    <string name="no">No</string>
+    <string name="ok">@android:string/ok</string>
+    <string name="bottom_nav_search">Search</string>
+    <string name="bottom_nav_watchlist">Watchlist</string>
+    <string name="bottom_nav_favorites">Favorites</string>
+    <string name="the_movie_manager">The Movie Manager</string>
+    <string name="copyright">This product uses the TMDb API but is not endorsed or certified by TMDb.</string>
+
+    <string name="login_with_email">Login with Email</string>
+    <string name="email">Email</string>
+    <string name="password">Password</string>
+    <string name="login">Login</string>
+    <string name="or">OR</string>
+    <string name="login_web">Login via Website</string>
+    <string name="email_wrong_format">Email format is invalid. Please check your email</string>
+    <string name="email_empty">Email area cannot be empty</string>
+    <string name="pass_empty">Password area cannot be empty</string>
+    <string name="coming_soon">Coming Soon</string>
+    <string name="add_to_watchlist">Add to Watchlist</string>
+    <string name="add_to_favorites">Add to Favorites</string>
+    <string name="already_added_watchlist">You has been already added this movie to your watchlist</string>
+    <string name="already_added_favorites">You has been already added this movie to your favorites</string>
+    <string name="succeed">Succeed!</string>
+    <string name="logout">Logout</string>
+    <string name="please_search">Please search a movie on the top search area</string>
+</resources>
