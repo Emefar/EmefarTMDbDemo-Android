@@ -11,7 +11,9 @@ import com.emefar.tmdb.base.MainActivity
 import com.emefar.tmdb.databinding.ActivityLoginBinding
 import com.emefar.tmdb.model.LoginModel
 import com.emefar.tmdb.utils.LDR
+import com.fxn.stash.Stash
 import timber.log.Timber
+
 
 class LoginActivity : AppCompatActivity() {
 
@@ -44,6 +46,8 @@ class LoginActivity : AppCompatActivity() {
     private val dataObserver = Observer<LDR<LoginModel>> { result -> // Need add real login response
         when (result?.status) {
             LDR.Status.ERROR -> {
+
+                Stash.put("IS_USER_LOGGED_IN", true)
 
                 val intent = Intent(this, MainActivity::class.java)
                 startActivity(intent)
