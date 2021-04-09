@@ -28,6 +28,9 @@ data class MovieItem(
     }
 
     fun getSearchName():String{
+        if (releaseDate.isNullOrEmpty()){
+            return title
+        }
         return  "$title ($releaseDate)"
     }
 
